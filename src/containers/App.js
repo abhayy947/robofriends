@@ -32,9 +32,7 @@ import Scroll from '../components/Scroll';
 		  			      robot.name.toLowerCase().includes(searchField.toLowerCase())
 		    );
 		 		
-		 	return !robots.length ?
-		 		<h1>Loading</h1>
-		 		: 
+		 	return ( 
 				    <div className='tc'>
 				        <h1 className='f1'>ROBOFRIENDS</h1>
 				            <SearchBox searchChange={this.onSearchChange}/>
@@ -44,7 +42,7 @@ import Scroll from '../components/Scroll';
 				     	             /ErrorBoundry>
 				     	        </Scroll>
 				     	    </div>
-				   ;
+				   );
 			
 		}
 }
