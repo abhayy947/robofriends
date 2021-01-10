@@ -29,20 +29,19 @@ import Scroll from '../components/Scroll';
         render(){
         	const {robots,searchField}=this.state;
 		    const filteredrobots=robots.filter(robot=>
-		  			      robot.name.toLowerCase().includes(searchField.toLowerCase())
-		    );
+		  			      robot.name.toLowerCase().includes(searchField.toLowerCase()));
 		 		
 		 	return ( 
 				    <div className='tc'>
 				        <h1 className='f1'>ROBOFRIENDS</h1>
 				            <SearchBox searchChange={this.onSearchChange}/>
 				     	        <Scroll>
-				     	            <ErrorBoundry>
-				     	              <CardList robots={filteredrobots}/>
-				     	             /ErrorBoundry>
-				     	        </Scroll>
-				     	    </div>
-				   );
+				     	            
+				     	         <CardList robots={filteredrobots}/>
+				     	             
+				     	    </Scroll>
+				    </div>
+				    );
 			
 		}
 }
